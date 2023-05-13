@@ -1,0 +1,48 @@
+{
+	"namespace": "tabbed_upsell",
+
+	"esbe_panel": {
+		"type": "stack_panel",
+		"orientation": "horizontal",
+		"size": ["100%",256],
+		"offset": [4,4],
+		"controls": [
+			{
+				"l":{
+					"type": "stack_panel",
+					"size": [132,"100%"],
+					"controls": [
+						{"i": {"type": "image","texture": "93976900_p0","size": [128,128]}},
+						{"s": {"type": "panel","size": [4,4]}},
+						{"n": {"type": "label","font_scale_factor": 1.5,"text": "§eMisakaAE"}},
+						{"c": {"type": "label","font_scale_factor": 1.2,"text": "BiliUID:66767091"}}
+					]
+				}
+			},
+			{
+				"r":{
+					"type": "stack_panel",
+					"size": ["fill","100%"],
+					"controls": [
+						{"n": {"type": "label","font_scale_factor": 1.5,"text": "§b§lNoNeteaseNoHack"}},
+						{"l": {"type": "label","font_scale_factor": 1.5,"text": "§k§c.§r§a§lMisakaAE§r§k§c.§r§f's §r§b§lMCPack§r"}},
+						{"a": {"type": "label","font_scale_factor": 1.0,"text": "§aVersion:§e1.0"}},
+						{"u": {"type": "label","font_scale_factor": 1.0,"text": "§c§l图片PixivID:66269143 "}},
+						{"0": {"type": "label","font_scale_factor": 1.0,"text": "§r§aNull"}}
+					]
+				}
+			}
+		]
+	},
+
+	"scroll@common.scrolling_panel": {
+		"$show_background": false,
+		"$scrolling_content": "tabbed_upsell.esbe_panel"
+	},
+
+	"tabbed_upseel_screen_panel@common_dialogs.main_panel_no_buttons": {
+		"size": ["80%","80%"],
+		"$text_name": "MisakaAE's MCPack",
+		"$child_control": "tabbed_upsell.scroll"
+	}
+}
